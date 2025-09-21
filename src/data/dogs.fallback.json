@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Snoopy",
+    "sex": "male",
+    "breed": "beagle",
+    "img": "https://placedog.net/800/600?id=179",
+    "present": true,
+    "age": 3,
+    "chipNumber": "SN-0001",
+    "owner": { "name": "Demo", "lastName": "Owner", "phoneNumber": "0700000001" }
+  },
+  {
+    "name": "Scooby",
+    "sex": "male",
+    "breed": "great dane",
+    "img": "https://placedog.net/800/600?id=237",
+    "present": false,
+    "age": 5,
+    "chipNumber": "SC-0002",
+    "owner": { "name": "Demo", "lastName": "Owner", "phoneNumber": "0700000002" }
+  }
+]
