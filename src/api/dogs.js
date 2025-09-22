@@ -1,3 +1,4 @@
+/* dogs.js */
 import fallbackDogs from "../data/dogs.fallback.json";
 
 const BIN_ID = `68cd58f5ae596e708ff3eea6`;
