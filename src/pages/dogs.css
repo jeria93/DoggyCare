@@ -1,0 +1,56 @@
+/* Page container */
+.dogs {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+/* Page title */
+.dogs__title {
+  margin: 0 0 16px;
+  font-size: clamp(28px, 4vw, 40px);
+}
+
+/* The list (a simple vertical stack) */
+.dogs__grid {
+  display: grid;
+  gap: 12px;
+}
+
+/* Each row/card in the list */
+.dogs__card {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  column-gap: 12px;
+  row-gap: 2px;
+  align-items: center;
+  padding: 8px 10px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+
+  /* subtle “card” feel */
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dogs__card:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* Put the text in column 2 (next to the image) */
+.dogs__name,
+.dogs__meta {
+  grid-column: 2 / -1;
+  margin: 0;
+}
+
+.dogs__name {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.dogs__meta {
+  opacity: 0.8;
+  font-size: 0.95rem;
+}

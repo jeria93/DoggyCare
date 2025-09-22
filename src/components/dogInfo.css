@@ -1,0 +1,16 @@
+.doginfo {
+  display: grid;
+  gap: 4px;
+}
+
+.doginfo__name {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.doginfo__meta {
+  margin: 0;
+  opacity: 0.8;
+  font-size: 0.95rem;
+}

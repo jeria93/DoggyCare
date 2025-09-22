@@ -1,4 +1,3 @@
-// src/components/LoadingPage.jsx
 import "./loading.css";
 
 export default function LoadingPage({

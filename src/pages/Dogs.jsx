@@ -1,9 +1,10 @@
-/* Dogs.jsx */
 import { useEffect, useState } from "react";
 import "./Dogs.css";
 import { fetchDogs } from "../api/dogs";
 import { Link } from "react-router-dom";
 import LoadingPage from "../components/LoadingPage";
+import DogImage from "../components/DogImage";
+import DogInfo from "../components/DogInfo";
 
 export default function Dogs() {
   const [dogs, setdogs] = useState([]);
@@ -29,18 +30,11 @@ export default function Dogs() {
             to={`/dogs/${dog.chipNumber}`}
             className="dogs__card"
           >
-            {/* Dog image with accessible alt text (extract to its own component for more control) */}
-            <img
-              className="dogs__img"
-              src={dog.img}
-              alt={`${dog.name} the ${dog.breed}`}
-            />
+            {/* Dog image */}
+            <DogImage src={dog.img} />
 
-            {/* Basic info (extract also as Header?) */}
-            <h3 className="dogs__name">{dog.name}</h3>
-            <p className="dogs__meta">
-              {dog.breed} - {dog.age} yrs
-            </p>
+            {/* Dog Info */}
+            <DogInfo name={dog.name} breed={dog.breed} age={dog.age} />
           </Link>
         ))}
       </div>
