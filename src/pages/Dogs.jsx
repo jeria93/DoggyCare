@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./Dogs.css";
+import "./dogs.css";
 import { fetchDogs } from "../api/dogs";
 import { Link } from "react-router-dom";
 import LoadingPage from "../components/LoadingPage";
