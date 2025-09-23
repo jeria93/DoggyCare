@@ -1,4 +1,3 @@
-/* dogs.js */
 import fallbackDogs from "../data/dogs.fallback.json";
 
 const BIN_ID = `68cd58f5ae596e708ff3eea6`;
@@ -21,5 +20,5 @@ export async function fetchDogs() {
 
 export async function getDogsById(id) {
   const allDogs = await fetchDogs();
-  return allDogs.find((dog) => dog.id === id) ?? null;
+  return allDogs.find((dog) => String(dog.chipNumber) === String(id)) ?? null;
 }

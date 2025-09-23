@@ -1,0 +1,44 @@
+.dogdetail {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.dogdetail__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.dogdetail__title {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.dogdetail__media {
+  margin: 12px 0 16px;
+}
+
+.dogdetail__info {
+  display: grid;
+  gap: 8px;
+}
+
+.dogdetail__row {
+  margin: 0;
+}
+
+.dogdetail__badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+
+.dogdetail__badge.is-present {
+  background: rgba(0, 128, 0, 0.15);
+}
+.dogdetail__badge.is-away {
+  background: rgba(220, 20, 60, 0.15);
+}
