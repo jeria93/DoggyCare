@@ -1,7 +1,17 @@
+/* Dog image thumbnail (mobile-first) */
 .dogimg {
   width: 72px;
   height: 72px;
   object-fit: cover;
   border-radius: 12px;
   display: block;
+}
+
+/* Desktop tweak: larger thumb + slightly rounder corners */
+@media (min-width: 768px) {
+  .dogimg {
+    width: 88px;
+    height: 88px;
+    border-radius: 14px;
+  }
 }
