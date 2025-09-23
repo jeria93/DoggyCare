@@ -32,24 +32,27 @@ export default function DogDetail() {
         </Link>
       </header>
 
-      <div className="dogdetail__media">
-        <DogImage src={dog.img} />
-      </div>
+      {/* Mobile 1 column, Desktop: 2 columns via CSS */}
+      <div className="dogdetail__main">
+        <div className="dogdetail__media">
+          <DogImage src={dog.img} />
+        </div>
 
-      <section className="dogdetail__info">
-        <DetailRow label="Breed" value={dog.breed} />
-        <DetailRow label="Age" value={`${dog.age} yrs`} />
-        <DetailRow label="Sex" value={dog.sex} />
-        <DetailRow
-          label="Status"
-          value={<StatusBadge present={dog.present} />}
-        />
-        <DetailRow label="Chip" value={dog.chipNumber} />
-        <DetailRow
-          label="Owner"
-          value={`${dog.owner?.name} ${dog.owner?.lastName} · ${dog.owner?.phoneNumber}`}
-        />
-      </section>
+        <section className="dogdetail__info">
+          <DetailRow label="Breed" value={dog.breed} />
+          <DetailRow label="Age" value={`${dog.age} yrs`} />
+          <DetailRow label="Sex" value={dog.sex} />
+          <DetailRow
+            label="Status"
+            value={<StatusBadge present={dog.present} />}
+          />
+          <DetailRow label="Chip" value={dog.chipNumber} />
+          <DetailRow
+            label="Owner"
+            value={`${dog.owner?.name} ${dog.owner?.lastName} · ${dog.owner?.phoneNumber}`}
+          />
+        </section>
+      </div>
     </main>
   );
 }

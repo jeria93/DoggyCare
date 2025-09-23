@@ -5,19 +5,19 @@
   padding: 24px 16px;
 }
 
-/* Page title */
+/* Title heading */
 .dogs__title {
   margin: 0 0 16px;
   font-size: clamp(28px, 4vw, 40px);
 }
 
-/* The list (a simple vertical stack) */
+/* Wrapper for the list of dogs */
 .dogs__grid {
   display: grid;
   gap: 12px;
 }
 
-/* Each row/card in the list */
+/* Each list row/card (image + text) */
 .dogs__card {
   display: grid;
   grid-template-columns: 72px 1fr;
@@ -28,29 +28,48 @@
   border-radius: 12px;
   text-decoration: none;
   color: inherit;
-
-  /* subtle “card” feel */
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+/* Subtle hover feedback */
 .dogs__card:hover {
   background: rgba(255, 255, 255, 0.06);
 }
 
-/* Put the text in column 2 (next to the image) */
+/* Place text column next to image */
 .dogs__name,
 .dogs__meta {
   grid-column: 2 / -1;
   margin: 0;
 }
 
+/* Dog name line */
 .dogs__name {
   font-weight: 700;
   font-size: 1.1rem;
 }
 
+/* Secondary info line (breed + age) */
 .dogs__meta {
   opacity: 0.8;
   font-size: 0.95rem;
+}
+
+@media (min-width: 768px) {
+  .dogs {
+    max-width: 960px;
+    padding: 32px 24px;
+  }
+
+  /* Slightly larger image column and padding */
+  .dogs__card {
+    grid-template-columns: 84px 1fr;
+    padding: 10px 12px;
+  }
+
+  /* Scale title a bit larger */
+  .dogs__title {
+    font-size: clamp(32px, 3vw, 44px);
+  }
 }
