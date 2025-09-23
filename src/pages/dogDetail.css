@@ -1,19 +1,35 @@
 .dogdetail {
   max-width: 680px;
   margin: 0 auto;
-  padding: 16px;
+  padding: 24px 16px;
 }
 
 .dogdetail__header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 12px;
   margin-bottom: 12px;
 }
 
 .dogdetail__title {
   margin: 0;
-  font-size: 2rem;
+  font-size: clamp(28px, 4vw, 40px);
+}
+
+.dogdetail__back {
+  text-decoration: none;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.dogdetail .dogimg {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  display: block;
+  border-radius: 12px;
+  object-fit: cover;
 }
 
 .dogdetail__media {
@@ -35,10 +51,28 @@
   border-radius: 999px;
   font-size: 0.9rem;
 }
-
 .dogdetail__badge.is-present {
   background: rgba(0, 128, 0, 0.15);
 }
 .dogdetail__badge.is-away {
   background: rgba(220, 20, 60, 0.15);
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .dogdetail {
+    max-width: 980px;
+    padding: 32px 24px;
+  }
+
+  .dogdetail__main {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 24px;
+    align-items: start;
+  }
+
+  .dogdetail__media {
+    margin: 0;
+  }
 }
