@@ -1,4 +1,4 @@
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./dogs.css";
 import { fetchDogs } from "../api/dogs";
 import { Link } from "react-router-dom";

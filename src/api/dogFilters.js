@@ -1,11 +1,19 @@
-export function textSearchDogs(dogs, query = "") {
-  const q = query.trim().toLowerCase();
-  if (!q) return dogs;
+export function textSearchDogs(allDogs, searchText = "") {
+  const normalizedQuery = String(searchText)
+    .trim() // removes empty spaces(beginning/end)
+    .replace(/\s{2,}/g, " ") // takes all middle empty spaces to just ONE
+    .toLowerCase(); // allows user to search with small and big letters
+  if (!normalizedQuery) return allDogs; // If query is empty after normalization, return the full, unfiltered list
 
-  return dogs.filter((d) => {
-    const name = d.name?.toLowerCase() ?? "";
-    const breed = d.breed?.toLowerCase() ?? "";
-    const age = String(d.age ?? "");
-    return name.includes(q) || breed.includes(q) || age.includes(q);
+  return allDogs.filter((dog) => {
+    const dogName = dog.name?.toLowerCase() ?? "";
+    const dogBreed = dog.breed?.toLowerCase() ?? "";
+    const ageText = String(dog.age ?? "");
+
+    return (
+      dogName.includes(normalizedQuery) ||
+      dogBreed.includes(normalizedQuery) ||
+      ageText.includes(normalizedQuery)
+    );
   });
 }
