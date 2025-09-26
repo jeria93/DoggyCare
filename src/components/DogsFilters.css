@@ -1,0 +1,40 @@
+.dogs__filters {
+  display: grid;
+  grid-template-columns: minmax(260px, 2fr) auto;
+  gap: 10px;
+  margin: 0 0 12px;
+}
+
+.dogs__filters input,
+.dogs__filters button {
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.04);
+  color: inherit;
+}
+
+/* Make the field taller and fill the whole column */
+.dogs__filters input {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 1rem;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.dogs__clear {
+  padding: 12px 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Desktop: even larger search field */
+@media (min-width: 768px) {
+  .dogs__filters {
+    grid-template-columns: minmax(420px, 3fr) auto;
+  }
+  .dogs__filters input {
+    padding: 14px 16px;
+    font-size: 1.05rem;
+  }
+}

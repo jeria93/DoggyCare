@@ -12,7 +12,6 @@ export async function fetchDogs() {
   } catch {
     return fallbackDogs.map((dog) => ({
       ...dog,
-      id: dog.chipNumber,
       isMock: true,
     }));
   }
