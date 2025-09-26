@@ -1,15 +1,30 @@
 # DoggyCare
 
-Minimal React + Vite app for a dog daycare:
+A small React + Vite app that lists dogs, lets you search by name/breed/age, and view details.
 
-- 3 routes via `createHashRouter`: `/` (Welcome), `/dogs` (Catalog), `/dogs/:id` (Detail)
-- Data from JSONBin (public read via `/latest`)
-- Hosted on GitHub Pages
+## Live demo
 
-## Getting Started
+**GitHub Pages:** https://jeria93.github.io/DoggyCare/
+
+## Features
+
+- One-field text search (case-insensitive) across **name**, **breed**, **age**
+- Dog detail page with status badge
+- Fallback image for broken URLs
+- Responsive layout (mobile-first)
+
+## Getting started
 
 ```bash
+# install deps
 npm install
+
+# dev server
 npm run dev
+
+# build
+npm run build
+
+# preview local build
+npm run preview
 ```
--
